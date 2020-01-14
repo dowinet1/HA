@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{%  block title %} calendario {% endblock %}
+{% block background %}{% load static %}{% static 'static/img/blog-bg.jpg' %}{% endblock%}
+{% block content%}
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> Calendario y Eventos</h3>
+        <!-- page start-->
+        <div class="row mt">
+          <aside class="col-lg-3 mt">
+            <div id="external-events">
+              <div class="external-event label label-theme">Agregar </div>
+              <div class="external-event label label-danger">Eliminar </div>
+              <br><br><br><br>
+            </div>
+          </aside>
+          <aside class="col-lg-9 mt">
+            <section class="panel">
+              <div class="panel-body">
+                <div id="calendar" class="has-toolbar"></div>
+              </div>
+            </section>
+          </aside>
+        </div>
+        <!-- page end-->
+      </section>
+      <!-- /wrapper -->
+    </section>
+    <!-- /MAIN CONTENT -->
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        <p>
+          &copy; Copyrights <strong>ITTG</strong>. All Rights Reserved
+        </p>
+        </div>
+        <a href="calendar.html#" class="go-top">
+          <i class="fa fa-angle-up"></i>
+          </a>
+      </div>
+    </footer>
+    <!--footer end-->
+  </section>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <!--common script for all pages-->
+  <!--script for this page-->
+  
+{% endblock %}

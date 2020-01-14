@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{%  block title %} Lista {% endblock %}
+{% block background %}{% load static %}{% endblock%}
+{% block content%}
+
+<section id="main-content">
+      <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> lista de usuarios</h3>
+
+						<span class="panel-options custom">
+								<div class="pagination pagination-top hidden-print  text-center" id="pagination_top">
+						</div>
+						</span>
+					</h3>
+				</div>
+				<div class="panel-body nopadding table_holder table-responsive cursor" id="table_holder">
+					<table class="table tablesorter table-hover" id="sortable_table">
+                    <thead><tr><th data-sort-column='' class='leftmost'>
+                    <input type="checkbox" id="select_all" />
+                    <label for="select_all"><span></span>
+                    </label></th>
+                    <th data-sort-column='name'>Nombre</th>
+                    <th data-sort-column='start_date'>Fecha de inicio</th>
+                    <th data-sort-column='end_date'>Fecha final</th>
+                    <th data-sort-column='type'>Tipo de documento</th>
+                    <th data-sort-column='coupon_code'>Descripcion</th>
+                    <th data-sort-column='active'>Estado</th>
+                    <th data-sort-column='edition'>Editar</th></tr></thead>
+                    <tbody>
+                    <tr>
+                    <td>
+                    <input type='checkbox' id='pricerule_29' value='29'/>
+                    <label for='pricerule_31'><span></span></label></td><td>zanag 6 piezas</td><td>07-10-2019</td><td>03-11-2019</td><td>Descuento avanzado</td><td></td><td>Activo</td><td class=""><a href="/edit/" class=" " title="Actualizacion">Editar</a></td></tr></tbody></table>			
+				</div>
+			</div>
+      <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                      <button class="btn btn-theme04" type="button">Eliminar</button>
+                    </div>
+                  </div>
+			<div class="text-center">
+			<div class="pagination hidden-print alternate text-center" id="pagination_bottom" >
+							</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{%  block title %} Lista {% endblock %}
+{% block background %}{% load static %}{% endblock%}
+{% block content%}
+
+<section id="main-content">
+      <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> Publicar comunicado</h3>
+
+ <section id="main-content">
+      <section class="wrapper site-min-height">
+
+        <div class="row mt">
+          <div class="col-lg-12">
+            <!-- The file upload form used as target for the file upload widget -->
+            <form id="fileupload" action="http://jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+              <!-- Redirect browsers with JavaScript disabled to the origin page -->
+              <noscript>
+                  <input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/">
+                </noscript>
+              <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+              <div class="row fileupload-buttonbar">
+                <div class="col-lg-8">
+                  <!-- The fileinput-button span is used to style the file input field as button -->
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>Agregar archivo...</span>
+                  <input type="file" name="files[]" multiple>
+                  </span>
+                  <!-- The extended global progress state -->
+                  <div class="progress-extended">
+                    &nbsp;
+                  </div>
+                </div>
+                </form>
+            </div>
+          </div>  
+      {% for project in projects %}
+        <!-- Proyecto -->
+        <div class="row project">  	
+            <div class="col-lg-8 ">
+                <img class="img-fluid" src="{{project.image.url}}" alt="">
+            </div>
+            <div class="col-lg-8">
+                <h2 class="section-heading title">{{project.title}}</h2>   
+                <p>{{project.description}}</p>
+                {% if project.link %}
+                    <p><a href="{{project.link}}">Más información</a></p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    
+{% endblock %}
